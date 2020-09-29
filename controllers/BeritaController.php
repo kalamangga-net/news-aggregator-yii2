@@ -41,7 +41,7 @@ class BeritaController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Link::find(),
+            'query' => Link::find()->orderBy('id DESC'),
         ]);
 
         return $this->render('index', [

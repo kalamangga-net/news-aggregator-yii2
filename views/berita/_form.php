@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use kartik\date\DatePicker;
-
+use moonland\tinymce\TinyMCE;
 use app\models\Xml;
 use app\models\Kategori;
 
@@ -41,14 +41,18 @@ $listKategori=ArrayHelper::map(Kategori::find()->all(),'id','label');
         </div>
     </div>
 
-    <?= $form->field($model, 'judul')->textInput() ?>
+    <div class="row">
+      <div class="col-lg-8">
+        <?= $form->field($model, 'judul')->textInput() ?>
+      </div>
+      <div class="col-lg-4">
+        <?= $form->field($model, 'md5')->textInput(['maxlength' => true]) ?>
+      </div>
+    </div>
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
-
-    <?= $form->field($model, 'ringkasan')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'md5')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'ringkasan')->widget(TinyMCE::className()); ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

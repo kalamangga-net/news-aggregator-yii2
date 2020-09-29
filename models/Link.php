@@ -31,7 +31,7 @@ class Link extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_sindikasi', 'judul', 'link', 'ringkasan'], 'required'],
+            [['id_sindikasi', 'id_kategori', 'judul', 'link', 'ringkasan', 'tanggal'], 'required'],
             [['id_sindikasi', 'id_kategori'], 'integer'],
             [['judul', 'ringkasan'], 'string'],
             [['tanggal'], 'safe'],
