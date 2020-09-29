@@ -26,7 +26,7 @@ class NewsController extends Controller
   public function actionCovid()
   {
     $dataProvider = new ActiveDataProvider([
-        'query' => Link::find()->where([ 'id_kategori' => '1']),
+        'query' => Link::find()->where([ 'id_kategori' => '4']),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
     ]);
     return $this->render('index', [
