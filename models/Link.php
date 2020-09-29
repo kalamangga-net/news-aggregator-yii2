@@ -32,7 +32,7 @@ class Link extends \yii\db\ActiveRecord
     {
         return [
             [['id_sindikasi', 'judul', 'link', 'ringkasan'], 'required'],
-            [['id_sindikasi'], 'integer'],
+            [['id_sindikasi', 'id_kategori'], 'integer'],
             [['judul', 'ringkasan'], 'string'],
             [['tanggal'], 'safe'],
             [['link'], 'string', 'max' => 300],
@@ -49,7 +49,8 @@ class Link extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_sindikasi' => 'Id Sindikasi',
+            'id_sindikasi' => 'Sindikasi',
+            'id_kategori' => 'Kategori',
             'judul' => 'Judul',
             'link' => 'Link',
             'tanggal' => 'Tanggal',
