@@ -18,9 +18,9 @@ $dataProvider = new ActiveDataProvider([
 
         <div class="row">
             <div class="col-lg-4">
-                <h2><?= Kategori::findOne(1)->label ?></h2>
-                <p><?= Kategori::findOne(1)->keterangan ?></p>
-                <p><a class="btn btn-default" href="/news/<?= Kategori::findOne(1)->kategori ?>"><?= Kategori::findOne(1)->label ?> &raquo;</a></p>
+                <h2><?= Kategori::findOne(4)->label ?></h2>
+                <p><?= Kategori::findOne(4)->keterangan ?></p>
+                <p><a class="btn btn-default" href="/news/<?= Kategori::findOne(4)->kategori ?>"><?= Kategori::findOne(4)->label ?> &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2><?= Kategori::findOne(2)->label ?></h2>
