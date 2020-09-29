@@ -1,4 +1,15 @@
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+ </IfModule>
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.php [L]
+
+RewriteCond %{HTTP_HOST} ^www\.kalamangga\.com$
+RewriteRule ^/?$ "https\:\/\/kalamangga\.com\/" [R=301,L]

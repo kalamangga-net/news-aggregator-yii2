@@ -8,7 +8,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
-class NewsController extends Controller
+class BeritaController extends Controller
 {
 
   public function actionIndex()
@@ -35,7 +35,7 @@ class NewsController extends Controller
     ]);
   }
 
-  public function actionEkonomi()
+  public function actionHoaks()
   {
     $dataProvider = new ActiveDataProvider([
         'query' => Link::find()->where([ 'id_kategori' => '2']),
@@ -43,7 +43,7 @@ class NewsController extends Controller
     ]);
     return $this->render('index', [
         'dataProvider' => $dataProvider,
-        'judul' => 'Berita Ekonomi Terbaru',
+        'judul' => 'Lawan Hoax!',
     ]);
   }
 

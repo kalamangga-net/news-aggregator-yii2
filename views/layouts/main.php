@@ -21,6 +21,9 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" lang="en-us" content="Kalamangga.Com, News, Agregator, Covid-19, Hoax, Teknologi" />
+  	<meta name="keywords" lang="id-ID" content="Kalamangga.Com, Berita, Agregasi, Covid-19, Hoaks, Teknologi" />
+  	<meta name="description" content="Kalamangga.Com Agregasi Berita Teknologi dan Lawan Hoaks" />
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
