@@ -11,6 +11,7 @@ use app\models\Kategori;
 $kat1 = Kategori::findOne(4);
 $kat2 = Kategori::findOne(5);
 $kat3 = Kategori::findOne(3);
+$kat4 = Kategori::findOne(2);
 
 $dataProvider = new ActiveDataProvider([
   'query' => Link::find()->limit(10),
@@ -56,6 +57,10 @@ $dataProvider = new ActiveDataProvider([
       <div class="row">
         <h2><?= $kat3->label ?></h2><p><?= $kat3->keterangan ?></p>
         <p><a class="btn btn-default" href="/berita/<?= $kat3->kategori ?>"><?= $kat3->label ?> &raquo;</a></p>
+      </div>
+      <div class="row">
+        <h2><?= $kat4->label ?></h2><p><?= $kat4->keterangan ?></p>
+        <p><a class="btn btn-default" href="/berita/<?= $kat4->kategori ?>"><?= $kat4->label ?> &raquo;</a></p>
       </div>
 
     </div>

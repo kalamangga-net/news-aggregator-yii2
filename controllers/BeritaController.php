@@ -38,7 +38,7 @@ class BeritaController extends Controller
   public function actionHoaks()
   {
     $dataProvider = new ActiveDataProvider([
-        'query' => Link::find()->where([ 'id_kategori' => '2']),
+        'query' => Link::find()->where([ 'id_kategori' => '5']),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
     ]);
     return $this->render('index', [
@@ -56,6 +56,18 @@ class BeritaController extends Controller
     return $this->render('index', [
         'dataProvider' => $dataProvider,
         'judul' => 'Berita Teknologi Terbaru',
+    ]);
+  }
+
+  public function actionEkonomi()
+  {
+    $dataProvider = new ActiveDataProvider([
+        'query' => Link::find()->where([ 'id_kategori' => '2']),
+        'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+    ]);
+    return $this->render('index', [
+        'dataProvider' => $dataProvider,
+        'judul' => 'Berita Ekonomi',
     ]);
   }
 
