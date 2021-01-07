@@ -16,6 +16,7 @@ class BeritaController extends Controller
     $dataProvider = new ActiveDataProvider([
         'query' => Link::find(),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+        'pagination' => [ 'pageSize' => 5, ],
     ]);
     return $this->render('index', [
         'dataProvider' => $dataProvider,
@@ -28,6 +29,7 @@ class BeritaController extends Controller
     $dataProvider = new ActiveDataProvider([
         'query' => Link::find()->where([ 'id_kategori' => '4']),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+        'pagination' => [ 'pageSize' => 5, ],
     ]);
     return $this->render('index', [
         'dataProvider' => $dataProvider,
@@ -40,6 +42,7 @@ class BeritaController extends Controller
     $dataProvider = new ActiveDataProvider([
         'query' => Link::find()->where([ 'id_kategori' => '5']),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+        'pagination' => [ 'pageSize' => 5, ],
     ]);
     return $this->render('index', [
         'dataProvider' => $dataProvider,
@@ -52,6 +55,7 @@ class BeritaController extends Controller
     $dataProvider = new ActiveDataProvider([
         'query' => Link::find()->where([ 'id_kategori' => '3']),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+        'pagination' => [ 'pageSize' => 5, ],
     ]);
     return $this->render('index', [
         'dataProvider' => $dataProvider,
@@ -64,6 +68,7 @@ class BeritaController extends Controller
     $dataProvider = new ActiveDataProvider([
         'query' => Link::find()->where([ 'id_kategori' => '2']),
         'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+        'pagination' => [ 'pageSize' => 5, ],
     ]);
     return $this->render('index', [
         'dataProvider' => $dataProvider,
